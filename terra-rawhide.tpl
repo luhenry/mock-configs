@@ -1,5 +1,5 @@
-# {% set rawhide = 44 %}
-config_opts['rawhide'] = '44'
+# {% set rawhide = 45 %}
+config_opts['rawhide'] = '45'
 
 config_opts['root'] = 'terra-{{ releasever }}-{{ target_arch }}'
 config_opts['dist'] = 'fc{{ releasever }}'  # only useful for --resultdir variable subst
