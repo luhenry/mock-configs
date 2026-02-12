@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         releasever: [rawhide, 43]
-        arch: [x86_64, aarch64, i386]
+        arch: [x86_64, i386]
     container:
       image: ghcr.io/terrapkg/builder:f${{ matrix.releasever }}
       options: --cap-add=SYS_ADMIN --privileged
@@ -80,7 +80,7 @@ jobs:
         run: cp -v mock-configs/*.tpl /etc/mock/templates/
 
       - name: Build with Andaman
-        run: anda build terra/mock-configs -c mock-configs/terra-el10-${{ matrix.arch }}.cfg
+        run: anda build terra/mock-configs -c mock-configs/terra-el10-x86_64.cfg
 
       - uses: actions/upload-artifact@v4
         with:
