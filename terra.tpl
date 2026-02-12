@@ -10,7 +10,7 @@ config_opts['mirrored'] = config_opts['target_arch'] != 'i686'
 config_opts['chroot_setup_cmd'] = 'install @{% if mirrored %}buildsys-{% endif %}build anda-srpm-macros terra-appstream-helper mold'
 config_opts['plugin_conf']['root_cache_enable'] = True
 config_opts['plugin_conf']['yum_cache_enable'] = True
-config_opts['plugin_conf']['ccache_enable'] = ({{ releasever }}| int) < 44 or (({{ releasever }} | int) >= 44 and config_opts['target_arch'] != 'i686')
+config_opts['plugin_conf']['ccache_enable'] = ('{{ releasever }}'| int) < 44 or (('{{ releasever }}' | int) >= 44 and config_opts['target_arch'] != 'i686')
 config_opts['plugin_conf']['ccache_opts']['compress'] = 'on'
 config_opts['plugin_conf']['ccache_opts']['max_cache_size'] = '10G'
 # repos
