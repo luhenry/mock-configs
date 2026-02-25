@@ -51,7 +51,7 @@ metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever&arch=$base
 type=rpm
 gpgcheck=1
 repo_gpgcheck=1
-gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc
+gpgkey=file:///etc/pki/mock/RPM-GPG-KEY-terra$releasever
 enabled=1
 enabled_metadata=1
 metadata_expire=0
@@ -62,7 +62,7 @@ metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever-extras&arc
 type=rpm
 gpgcheck=1
 repo_gpgcheck=1
-gpgkey=https://repos.fyralabs.com/terra$releasever-extras/key.asc
+gpgkey=file:///etc/pki/mock/RPM-GPG-KEY-terra$releasever-extras
 enabled=1
 priority=150
 enabled_metadata=1
@@ -74,7 +74,7 @@ metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever-nvidia&arc
 type=rpm
 gpgcheck=1
 repo_gpgcheck=1
-gpgkey=https://repos.fyralabs.com/terra$releasever-nvidia/key.asc
+gpgkey=file:///etc/pki/mock/RPM-GPG-KEY-terra$releasever-nvidia
 enabled=0
 enabled_metadata=1
 metadata_expire=0
@@ -86,7 +86,7 @@ metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever-mesa&arch=
 type=rpm
 gpgcheck=1
 repo_gpgcheck=1
-gpgkey=https://repos.fyralabs.com/terra$releasever-mesa/key.asc
+gpgkey=file:///etc/pki/mock/RPM-GPG-KEY-terra$releasever-mesa
 enabled=0
 enabled_metadata=1
 metadata_expire=0
@@ -97,7 +97,7 @@ metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever-multimedia
 type=rpm
 gpgcheck=1
 repo_gpgcheck=1
-gpgkey=https://repos.fyralabs.com/terra$releasever-multimedia/key.asc
+gpgkey=file:///etc/pki/mock/RPM-GPG-KEY-terra$releasever-multimedia
 enabled=0
 enabled_metadata=1
 metadata_expire=0
