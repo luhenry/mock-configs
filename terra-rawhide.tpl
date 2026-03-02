@@ -4,7 +4,7 @@ config_opts['rawhide'] = '45'
 config_opts['root'] = 'terra-{{ releasever }}-{{ target_arch }}'
 config_opts['dist'] = 'fc{{ releasever }}'  # only useful for --resultdir variable subst
 config_opts['macros']['%dist'] = '.fc{{ releasever }}'
-config_opts['package_manager'] = 'dnf4'
+config_opts['package_manager'] = 'dnf5'
 config_opts['extra_chroot_dirs'] = [ '/run/lock', ]
 config_opts['use_bootstrap'] = False
 #config_opts['bootstrap_image'] = 'ghcr.io/terrapkg/builder:f{{ releasever }}'
@@ -104,14 +104,6 @@ metadata_expire=0
 
 [local-rawhide-build]
 name=local-rawhide
-baseurl=https://kojipkgs.fedoraproject.org/repos/rawhide/latest/$basearch/
-cost=2000
-# enabled only if not mirrored, and rawhide
-enabled={% if not mirrored and releasever == 'rawhide' %}1{% else %}0{% endif %}
-skip_if_unavailable=False
-
-[local]
-name=local
 baseurl=https://kojipkgs.fedoraproject.org/repos/rawhide/latest/$basearch/
 cost=2000
 enabled={{ not mirrored }}
